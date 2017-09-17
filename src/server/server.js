@@ -1,16 +1,12 @@
 var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
+import App from '../client/App';
 
 var app = express();
 
-app.use(express.static(path.join(__dirname, '../client')));
-// app.set('view engine', 'html');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
 app.get('/', function(req, res) {
-    res.render('index');
+    res.send(ReactDOMServer.renderToString(<App />));
 });
 
 app.listen(3000, function() {
