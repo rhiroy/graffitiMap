@@ -1,0 +1,17 @@
+{
+  "name": "graffitiMap",
+  "version": "1.0.0",
+  "description": "tag a map of your city",
+  "main": "index.js",
+  "author": "rhiroy <rhiroy@protonmail.ch>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "nodemon": "^1.12.1",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "start": "nodemon --ignore node_modules src/server/server.js"
+  }
+}
